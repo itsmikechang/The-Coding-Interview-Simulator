@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS other_db;
+
+CREATE DATABASE other_db;
+
+USE other_db;
+
+CREATE TABLE other (
+  id INT(255) NOT NULL,
+  que TEXT NOT NULL,
+  a VARCHAR(222) NOT NULL,
+  b VARCHAR(222) NOT NULL,
+  ans VARCHAR(222) NOT NULL
+);

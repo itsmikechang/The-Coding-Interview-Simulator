@@ -9,37 +9,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css" />
-    <title>Know Your Javascript! | Code Quiz</title>
+    <title>Highscores | Code Quiz</title>
 </head>
 
 <body>
-    <!-- Navigation Bar for Highscores and Timer -->
-    <nav>
-        <div class="row">
-            <div class="col md-6 d-flex justify-content-between">
-                <a href="highscores.html">View Highscores</a>
-                <div id="currentTime"></div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Body of Text Content -->
-    <div class="container" id="questionsDiv">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Coding Quiz Challenge</h1>
+                <h1>Highscores</h1>
+                <!-- Highscore List -->
+                <ul id="highScore"></ul>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
-                    answers will penalize your scoretime by ten seconds!</p>
-                <ul id="choicesUl"></ul>
+            <div class="col-md-6">
+                <!-- Go Back and Clear Highscore Buttons -->
+                <button id="goBack">Go Back</button>
             </div>
-        </div>
-    <!-- Start Quiz Button -->
-        <div class="row">
-            <div class="col-md-12"><button id="startTime">Start Quiz</button></div>
+            <div class="col-md-6">
+                <button id="clear" value="reset">Clear Highscore</button>
+            </div>
         </div>
     </div>
 
@@ -53,8 +42,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="assets/questions.js"></script>
-    <script src="assets/script.js"></script>
-
+    <script src="assets/highscores.js"></script>
 </body>
+
 </html>

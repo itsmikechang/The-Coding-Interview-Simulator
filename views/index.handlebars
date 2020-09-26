@@ -1,0 +1,14 @@
+<ul>
+    {{#each questions}}
+    <li class="questions">
+        <p>{{title}}</p>
+
+    <div class="answer-btns">
+		    <button class="answers" data-id="{{id}}"><p>{{choice1}}</p></button>
+        <button class="answers" data-id="{{id}}"><p>{{choice2}}</p></button>
+        <button class="answers" data-id="{{id}}"><p>{{choice3}}</p></button>
+        <button class="answers" data-id="{{id}}"><p>{{choice4}}</p></button>
+    </div> 
+    </li>
+    {{/each}}
+</ul>

@@ -1,0 +1,13 @@
+<div class="container-fluid">
+
+    <div class="highscores-list mt-5 d-flex flex-column flex-sm-row justify-content-between">
+        <h2 class="list-title">Highscores</h2>
+        <ul>
+          {{#each questions}}
+          <li>
+              {{initals}}
+              {{score}}
+          </li>
+          {{/each}}
+        </ul>
+  </div>

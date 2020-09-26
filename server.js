@@ -4,6 +4,11 @@ var PORT = process.env.PORT || 8080;
 
 var app = express();
 
+app.use(express.static('public'));
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -64,14 +69,14 @@ var questions = [
   ];
 
 
-app.get("/questions/:id", function(req, res) {
-    for (var i = 0; i < questions.length; i++) {
-        if (questions[i].id === req.params.id) {
-            return res.render("index", questions[i])
-        }
-    }
-    res.render('index', questions[0])
-    })
+//app.get("/questions/:id", function(req, res) {
+  //  for (var i = 0; i < questions.length; i++) {
+    //    if (questions[i].id === req.params.id) {
+      //      return res.render("index", questions[i])
+      //  }
+  //  }
+   // res.render('index', questions[0])
+    //})
 
     
 app.get("/questionall", function(req, res) { 

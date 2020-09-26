@@ -1,8 +1,6 @@
-const $answerbutton = $(".answers");
 
-recordAnswer() {
-    
-}
-
-
-$answerbutton.on("click", recordAnswer)
+$(function() {
+    $(".answers").click(function(){
+    alert("The paragraph was clicked.");
+    });
+  });

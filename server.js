@@ -1,4 +1,7 @@
 var express = require("express");
+const fs = require("fs");
+//const htmljsoon = require("html-to-json")
+//const { v4: uuidv4 } = require('uuid');
 
 var PORT = process.env.PORT || 8080;
 
@@ -10,15 +13,26 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 var exphbs = require("express-handlebars");
+const { ppid } = require("process");
+const htmlToJson = require("html-to-json/lib/htmlToJson");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-
-
 //var routes = require("./controllers/quizController.js");
 
 //app.use(routes);
+
+//app.post('/index', (req, res) => {
+  //  console.log("this is the req body" + JSON.stringify(req.body))
+  //  const dbBuffer = fs.readFileSync('./db/answerBank.json')
+  //  const db = JSON.parse(dbBuffer)
+  //  db.push({...req.body, UUID: uuidv4()})
+
+ //  fs.writeFileSync('./db/answerBank', JSON.stringify(db))
+//})
+
+
 
 var questions = [
     {
@@ -90,7 +104,11 @@ app.get("/questionall", function(req, res) {
         data.questions.push(currentQuestion)
     }
     res.render('index', data)
+    
+
 })
+
+
 
 
 app.listen(PORT, function() {
